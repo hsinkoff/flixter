@@ -27,6 +27,11 @@ h1, h2, h3, h4, h5, h6, .navbar {
 	margin: 0;
 }
 
+body {
+	background: url('green_cup.png');
+	font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+}
+
 .frosty {
 	background:rgba(0,0,0,0.5);
 	color:white;
@@ -39,7 +44,7 @@ h1, h2, h3, h4, h5, h6, .navbar {
 }
 
 .frosty h2 {
-	font-family: "Helvetica Neue", Helvetiva;
+	font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 	font-weight: 200;
 	text-shadow: rgba(0,0,0,0.95) 1px 1px;
 }
