@@ -18,6 +18,7 @@ gem "fog", "~> 1.3.1"
 gem 'mini_magick'
 gem 'stripe'
 gem 'ranked-model'
+gem 'jquery-ui-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
