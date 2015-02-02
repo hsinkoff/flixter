@@ -6,10 +6,22 @@
 	background: url('green_cup.png');
 }
 
+.navbar-nav > li > a {
+	color: white !important;
+}
+
+.navbar-nav > li > a:hover {
+	color: green !important;
+}
+
 .navbar-inverse a.navbar-brand {
 	font-family: "Helvetica Neue", Helvetica;
 	font-weight: 100;
 	color: white;
+}
+
+.navbar-inverse a.navbar-brand:hover {
+	color: green !important;
 }
 
 .booyah-box {
