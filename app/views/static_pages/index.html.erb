@@ -2,10 +2,10 @@
 	<br /><br /><br /><br /><br /><br />
 
   <div class="frosty col-xs-2 col-xs-offset-5 text-center">
-  	
+  	<br />
     <h1> Welcome to Flixter</h1>
     <br />
-    <h2> Your window to the world</h2>
+    <h3> Your window to the world</h2>
     
     <%= link_to "Learn More", courses_path, :class => 'btn btn-success' %>
     <br /><br />
@@ -15,14 +15,28 @@
 <br />
 <div class="col-xs-10 col-xs-offset-1 features text-center">
 	<div class="col-sm-4">
-		<h3>Feature 1 </h3>
+		<h3><%= link_to "Teach a Course", new_user_registration_path, :class => 'heading'%> </h3>
+		<br/>
+		<h4> If you are interested in sharing your knowledge this is the place for you.
+		</h4>
+		&nbsp
+		<p>Pick a topic, set up the course, upload the lessons, and away you go.</p>
 	</div>
 
 	<div class ="col-sm-4">
-		<h3>Feature 2</h3>
+		<h3><%= link_to "The Best of Both Worlds", new_user_registration_path, :class => 'heading' %></h3>
+		<br/>
+		<h4>Have one topic you just can't wait to share with the world and another you always wanted to know more about?  This is the place.</h4>
+		&nbsp
+		<p>Pick a topic, set up the course, upload the lessons, and you're teaching.
+			Find your topic, sign up, and you're the student.</p>
 	</div>
 
 	<div class="col-sm-4">
-		<h3>Feature 3</h3>
+		<h3><%= link_to "Take a Course", new_user_registration_path, :class => 'heading' %></h3>
+		<br/>
+		<h4>Always wanted to know more about a specific topic?  This is the place to take your first step down the path to knowledge.</h4>
+		&nbsp
+		<p>Find your topic, sign up, and the learning begins.</p>
 	</div>
 </div>

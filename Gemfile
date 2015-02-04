@@ -19,6 +19,7 @@ gem 'mini_magick'
 gem 'stripe'
 gem 'ranked-model'
 gem 'jquery-ui-rails'
+gem "factory_girl_rails", "~> 4.0"
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
