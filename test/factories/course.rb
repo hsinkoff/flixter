@@ -4,6 +4,7 @@ FactoryGirl.define do
 		description "great course"
 		cost 2.0
 
-		association :user	
+		association :user
+			
 	end
 end

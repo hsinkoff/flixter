@@ -24,7 +24,7 @@
 		   <% else %>
 		   <%= form_tag course_enrollments_path(@course) do %>
        
-        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        	<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                 data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
                 data-description="<%= @course.title%> (<%= number_to_currency @course.cost %>)"
                 data-amount="<%= (@course.cost * 100).to_i %>"></script>
@@ -42,19 +42,19 @@
 		  <br /> <br/>
 		  <div class="section">
 			<h3>
-			<%= section.title %>
-		</h3>
+				<%= section.title %>
+			</h3>
 			<% section.lessons.rank(:row_order).each do |lesson| %>
-			 <div class="col-xs-12 col-sm-6">
-			  <div class="lesson text-center">
-			  	<br />
-			  	<%= link_to lesson_path(lesson) do %>
-				  <b><%= lesson.title %></b>
-				  <br/>
-				  <%= lesson.subtitle %>
-				<% end %>
+			  <div class="col-xs-12 col-sm-6">
+			    <div class="lesson text-center">
+			  	  <br />
+			  	  <%= link_to lesson_path(lesson) do %>
+				    <b><%= lesson.title %></b>
+				    <br/>
+				    <%= lesson.subtitle %>
+				  <% end %>
+			  	</div>
 			  </div>
-			 </div>
 			<% end %>
 			<br class="clr" />
 		  </div>

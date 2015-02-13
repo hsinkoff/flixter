@@ -48,40 +48,40 @@ $(function() {
 
 	<ul class="sections">
 		<% current_course.sections.rank(:row_order).each do |section| %>
-		<li data-update-url="<%=instructor_section_path(section) %>" class="section-li">
-			<div class="header">
-			<span class="glyphicon glyphicon-list"></span>
-			<%= section.title %>
-		</div>
+			<li data-update-url="<%=instructor_section_path(section) %>" class="section-li">
+				<div class="header">
+					<span class="glyphicon glyphicon-list"></span>
+					<%= section.title %>
+				</div>
 		<!-- Button trigger modal -->
-		<button class="btn btn-primary btn-sm pull-right new-lesson-button" data-toggle="modal" data-target="#newLessonModal" data-lesson-url=" <%=instructor_section_lessons_path(section) %>">
-  			New Lesson...
-		</button>
+				<button class="btn btn-primary btn-sm pull-right new-lesson-button" data-toggle="modal" data-target="#newLessonModal" data-lesson-url=" <%=instructor_section_lessons_path(section) %>">
+  					New Lesson...
+				</button>
 			
-			<br class="clr" />
-			<br class="clr" />
+				<br class="clr" />
+				<br class="clr" />
 			
-			<ul class="lessons">
-				<% section.lessons.rank(:row_order).each do |lesson| %>
-					<li data-update-url="<%= instructor_lesson_path(lesson) %>">
-						<div class="col-xs-1">
-							<br />
-						<span class="glyphicon glyphicon-list"></span>
-						</div>
-						<div class="col-xs-11 text-center">
-						<p>
-							<b><%= lesson.title %></b>
-						</p>
-						<p>
-							<%= lesson.subtitle %>
-						</p>
-						</div>
-						<br class="clr" />
-					</li>
-				<% end %>
-			</ul>
-			<br class="clr"/>
-		</li>
+				<ul class="lessons">
+					<% section.lessons.rank(:row_order).each do |lesson| %>
+						<li data-update-url="<%= instructor_lesson_path(lesson) %>">
+							<div class="col-xs-1">
+								<br />
+							<span class="glyphicon glyphicon-list"></span>
+							</div>
+							<div class="col-xs-11 text-center">
+								<p>
+									<b><%= lesson.title %></b>
+								</p>
+								<p>
+									<%= lesson.subtitle %>
+								</p>
+							</div>
+							<br class="clr" />
+						</li>
+					<% end %>
+				</ul>
+				<br class="clr"/>
+			</li>
 		<% end %>
 	</ul>
 </div>
@@ -94,24 +94,21 @@ $(function() {
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="newSectionModalLabel">Add a new Section</h4>
+          <h4 class="modal-title" id="newSectionModalLabel">Add a new Section</h4>
       </div>
       <%= simple_form_for @section, :url => instructor_course_sections_path(current_course) do |f| %>
-      <div class="modal-body">
+        <div class="modal-body">
       	
-		<%= f.input :title %>
+		  <%= f.input :title %>
 		</div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-       	<%= f.submit "Add a Section" %>
-      </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       	  <%= f.submit "Add a Section" %>
+        </div>
       <% end %>
     </div>
   </div>
 </div>
-
-
-
 
 
 <!-- Modal -->
@@ -120,20 +117,18 @@ $(function() {
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="newLessonModalLabel">Add a new lesson</h4>
+          <h4 class="modal-title" id="newLessonModalLabel">Add a new lesson</h4>
       </div>
-       <%= simple_form_for @lesson, :url => "#", :html => {:id => 'newLessonForm'} do |f| %>
-      <div class="modal-body">
-       
-	<%= f.input :title %>
-	<%= f.input :subtitle %>
-	<%= f.input :video %>
-	
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-       <%= f.submit "Add the Lesson", :class => 'btn btn-primary' %>
-      </div>
+      <%= simple_form_for @lesson, :url => "#", :html => {:id => 'newLessonForm'} do |f| %>
+        <div class="modal-body">
+	      <%= f.input :title %>
+	      <%= f.input :subtitle %>
+	      <%= f.input :video %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <%= f.submit "Add the Lesson", :class => 'btn btn-primary' %>
+        </div>
       <% end %>
     </div>
   </div>

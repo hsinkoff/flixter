@@ -17,13 +17,13 @@ class EnrollmentsController < ApplicationController
       		:description => 'Flixter Course Fee',
       		:currency    => 'usd'
     	)
-      end		
-    	current_user.enrollments.create(:course => current_course)
-    	redirect_to course_path(current_course)
+    end		
+    current_user.enrollments.create(:course => current_course)
+    redirect_to course_path(current_course)
 
-  		rescue Stripe::CardError => e
-    		flash[:error] = e.message
-    		redirect_to root_path
+  	rescue Stripe::CardError => e
+    flash[:error] = e.message
+    redirect_to root_path
 	end
 
 	private
